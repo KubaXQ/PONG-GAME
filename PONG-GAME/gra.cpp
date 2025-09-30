@@ -163,7 +163,7 @@ void gra::parametry_pilki()
 void gra::ruch_pilki(float delta)
 {
 	// Ruch pi³ki
-	pilka.move(velocity_pilki * delta * 1.5f);
+	pilka.move(velocity_pilki * delta * 2.f);
 
 	// Dane pomocnicze
 	float center_pilki_y = pilka.getPosition().y + pilka.getRadius();
@@ -236,7 +236,7 @@ void gra::wyswietlanie_wyniku(std::string tekst)
 	score.setFillColor(sf::Color::White);
 	score.setCharacterSize(100);
 	score.setPosition(sf::Vector2f(200, 50));
-	score.setString("wynik to " + tekst);
+	score.setString("Score is " + tekst);
 	window.draw(score);
 	window.display();
 	sf::sleep(sf::seconds(2));
@@ -251,7 +251,7 @@ void gra::sprawdzanie_gola()
 		pilka.setPosition(sf::Vector2f(595, 295));
 		gracz1.setPosition(sf::Vector2f(50, 250));
 		gracz2.setPosition(sf::Vector2f(1100, 250));
-		velocity_pilki = { 300.f,0 };
+		velocity_pilki = { 500.f,0 };
 		punkty_gracz2++;
 		std::string wynik = std::to_string(punkty_gracz1) + " : " + std::to_string(punkty_gracz2);
 		wyswietlanie_wyniku(wynik);
@@ -263,7 +263,7 @@ void gra::sprawdzanie_gola()
 		pilka.setPosition(sf::Vector2f(595, 295));
 		gracz1.setPosition(sf::Vector2f(50, 250));
 		gracz2.setPosition(sf::Vector2f(1100, 250));
-		velocity_pilki = { -300.f,0 };
+		velocity_pilki = { -500.f,0 };
 		punkty_gracz1++;
 		std::string wynik = std::to_string(punkty_gracz1) + " : " + std::to_string(punkty_gracz2);
 		wyswietlanie_wyniku(wynik);
