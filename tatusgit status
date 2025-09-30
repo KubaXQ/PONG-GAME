@@ -1,0 +1,11 @@
+[33mcommit 930fd7006b8bf532c8d962ad515bea4fdb090132[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Jakub Mazanek <kubamazanek1@gmail.com>
+Date:   Mon Sep 29 18:56:17 2025 +0200
+
+    Trzeba naprawic odbijanie od graczy, hitboxy gola i AI poprawic
+
+[33mcommit 59f6fb97575437484c62026f9bce16012fc9f639[m
+Author: Jakub Mazanek <kubamazanek1@gmail.com>
+Date:   Mon Sep 29 18:49:37 2025 +0200
+
+    Dodaj .gitattributes, .gitignore, README.md i LICENSE.txt.
