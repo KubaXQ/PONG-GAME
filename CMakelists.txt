@@ -1,0 +1,40 @@
+cmake_minimum_required(VERSION 3.20)
+
+project(PONG-GAME)
+
+# Udostępnia moduł FetchContent
+include(FetchContent)
+
+# Deklaracja biblioteki SFML
+FetchContent_Declare(
+    SFML
+    GIT_REPOSITORY https://github.com/SFML/SFML.git
+    GIT_TAG 3.0.1
+)
+
+# Pobranie biblioteki i dodanie jej do projektu
+FetchContent_MakeAvailable(SFML)
+
+# Tworzymy plik wykonywalny
+add_executable(PONG-GAME
+    src/gra.cpp
+    src/graAI.cpp
+    src/main.cpp
+    src/menu.cpp
+)
+
+# Dodajemy nasze nagłówki
+target_include_directories(PONG-GAME PRIVATE
+    include
+)
+
+# Linkujemy SFML
+target_link_libraries(PONG-GAME PRIVATE
+    SFML::Graphics
+)
+
+add_custom_command(TARGET PONG-GAME POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${CMAKE_SOURCE_DIR}/Naraka.ttf"
+        "$<TARGET_FILE_DIR:PONG-GAME>/Naraka.ttf"
+)

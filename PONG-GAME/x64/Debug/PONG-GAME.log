@@ -1,3 +1,0 @@
-﻿  gra.cpp
-C:\Users\jakub\source\repos\PONG-GAME\PONG-GAME\gra.cpp(12,19): warning C4834: odrzucenie wartości zwracanej funkcji z atrybutem [[nodiscard]]
-  PONG-GAME.vcxproj -> C:\Users\jakub\source\repos\PONG-GAME\x64\Debug\PONG-GAME.exe
